@@ -1,7 +1,7 @@
 import React from "react";
 import "semantic-ui-css/semantic.css";
 import { Menu, Icon } from "semantic-ui-react";
-import { Link } from "next/link";
+import Link from "next/link";
 import { AppProvider } from "@/useHooks/useAppState";
 
 export default function App({ Component, pageProps }) {

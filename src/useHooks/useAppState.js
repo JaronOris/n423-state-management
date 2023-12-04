@@ -3,7 +3,11 @@ import React from "react";
 const AppContext = React.createContext();
 
 export function AppProvider({ children }) {
-  const [appState, setAppState] = React.useState({ user: "Jaron" });
+  const [appState, setAppState] = React.useState({
+    user: "User",
+    favoriteCats: [],
+    catImages: [],
+  });
 
   function updateAppState(newStateValues) {
     setAppState({
