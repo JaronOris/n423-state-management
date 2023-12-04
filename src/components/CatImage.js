@@ -1,5 +1,6 @@
 import React from "react";
-import { Grid, Button, Image, Popup } from "semantic-ui-react";
+import { Grid, Button, Image, Popup, Menu } from "semantic-ui-react";
+import Link from "next/link";
 
 export default function CatImage({ src, onClick }) {
   return (
@@ -8,7 +9,16 @@ export default function CatImage({ src, onClick }) {
         trigger={<Image src={src} />}
         on="click"
         content={
-          <Button content="Like" icon="heart" color="red" onClick={onClick} />
+          <Grid divided columns="equal">
+            <Menu>
+              <Menu.Item>
+                <Button content="Like" icon="heart" color="red" onClick={onClick} fluid />
+              </Menu.Item>
+              <Menu.Item>
+                <Button content="Info" icon="list" color="green" as={Link} href="/catInfo" fluid />
+                </Menu.Item>
+            </Menu>
+          </Grid>
         }
       />
     </Grid.Column>

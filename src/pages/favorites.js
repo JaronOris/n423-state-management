@@ -31,7 +31,7 @@ export default function Favorites() {
         </Grid.Column>
         <Grid.Row columns="5">
           {appState.favoriteCats.map((cat) => {
-            return <CatImage key={cat.id} src={cat.url} />;
+            return <CatImage key={cat.id} src={cat.url} />
           })}
         </Grid.Row>
       </Grid>
