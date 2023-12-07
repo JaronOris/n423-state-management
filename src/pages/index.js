@@ -47,6 +47,7 @@ export default function Home() {
               <CatImage
                 key={catImage.id}
                 src={catImage.url}
+                id={catImage.id}
                 onClick={() => saveCatImage(catImage)}
               />
             );
